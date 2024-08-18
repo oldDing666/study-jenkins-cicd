@@ -18,7 +18,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    def mvnHome = tool 'maven-3.6.3' // 假设 Maven 已经在 Jenkins 中配置
+                    def mvnHome = tool 'maven-3.9.9' // 假设 Maven 已经在 Jenkins 中配置
                     sh "'${mvnHome}/bin/mvn' clean package"  // 使用 Maven 构建项目
                 }
             }
