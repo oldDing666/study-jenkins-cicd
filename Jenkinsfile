@@ -1,5 +1,5 @@
 pipeline {
-    agent none  // 使用任意可用的代理
+    agent any  // 使用任意可用的代理
 
     environment {
         DOCKER_HUB_CREDENTIALS = 'dockerhub-credentials'  // 指定 Docker Hub 凭证 ID
