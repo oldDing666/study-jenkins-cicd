@@ -44,6 +44,7 @@ pipeline {
         }
     }
 
+
     post {
         success {
             echo 'Pipeline completed successfully!'  // 成功后执行的操作
