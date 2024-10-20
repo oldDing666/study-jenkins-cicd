@@ -1,5 +1,5 @@
 pipeline {
-    agent any  // 使用任意可用的代理
+    agent none  // 使用任意可用的代理
 
     environment {
         DOCKER_HUB_CREDENTIALS = 'dockerhub-credentials'  // 指定 Docker Hub 凭证 ID
@@ -25,6 +25,7 @@ pipeline {
         }
 
         stage('Build Docker Image') {
+            agent any
             steps {
                 script {
                     sh "docker build -t ${DOCKER_IMAGE}:${env.BUILD_NUMBER} ."  // 构建 Docker 镜像
