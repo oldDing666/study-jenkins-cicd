@@ -8,7 +8,6 @@ pipeline {
         APP_NAME = 'study-jenkins-cicd' // 应用名字
     }
 
-
     stages {
         stage('Clone Repository') {
             steps {
